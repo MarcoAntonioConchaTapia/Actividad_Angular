@@ -1,0 +1,10 @@
+thead{
+    color:purple;
+}
+
+.card-header{
+    background-color: purple;
+    color: white;
+}
+
+.imagen:hover {filter: opacity(.5);}

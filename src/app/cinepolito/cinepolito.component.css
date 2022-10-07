@@ -1,0 +1,25 @@
+h1{
+    color:  black;
+    text-align: center;
+    margin: 20 px;
+    background-color: silver;
+}
+
+h3{
+    color:  6D6D6D;
+    margin: 20 px;
+    text-align: center;
+}
+
+label{
+    color: 3C3C3C;
+}
+
+.bg-primary{
+    background-color: slategray !important; 
+}
+
+button{
+    margin: 15 px;
+    color: black;
+}

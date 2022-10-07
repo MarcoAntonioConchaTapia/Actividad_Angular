@@ -1,0 +1,43 @@
+h1{
+    color:  black;
+    text-align: center;
+    margin: 20 px;
+ 
+}
+h2{
+    color:  white;
+    text-align: center;
+    margin: 20 px;
+    background-color: darkolivegreen;
+}
+
+h3{
+    color:  6D6D6D;
+    margin: 20 px;
+    text-align: center;
+}
+
+label{
+    color: 3C3C3C;
+}
+
+.bg-primary{
+    background-color: slategray !important; 
+}
+
+button{
+    margin: 15 px;
+    color: black;
+}
+
+body {
+    margin: 0;
+  }
+
+.video{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;}

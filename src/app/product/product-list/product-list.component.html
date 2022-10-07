@@ -1,0 +1,59 @@
+<div class="card">
+    <div class="card-header">
+       Lista de prodcutos
+    </div>
+    <div class="card-body">
+       <div class="row">
+           <div class="col-md-2">
+               Filtrar por:
+           </div>
+           <div class="col-md-4">
+               <input [(ngModel)]="listFilter" type="text" class="form-control" name="filter">
+           </div>
+       </div>
+       <div class="row">
+           <div class="col-md-6">
+               <h3>Filtro: {{listFilter}} </h3>
+           </div>
+       </div>
+       <div class="table-responsive">
+           <table class="table">
+               <thead>
+                   <tr>
+                       <th>
+                           <button (click)="showImagen()" type="button" class="btn btn-danger">
+                               {{muestraImg?'Ocultar ':'Mostrar'}} Imagen
+                           </button>
+                       </th>
+                       <th>Modelo</th>
+                       <th>Descripcion</th>
+                       <th>año</th>
+                       <th>presio</th>
+                       <th>Marca</th>
+                       <th>Color</th>
+                   </tr>
+               </thead>
+               <tbody>
+                   <tr *ngFor="let coche of productos | productoFiltro:listFilter">
+                       <!-- <td><img src="{{coche.imagenUrl}}" alt="" width="200px" class="imagen" id="imagen" ></td> -->
+                       <td>
+                        <img 
+                        *ngIf="muestraImg"
+                        [src]="coche.imagenUrl" src="" alt="" 
+                        [title]="coche.Modelo" 
+                        [style.width.px]="imagenWidth"
+                        [style.margin.px]="imagenMargin"  >
+                       </td>
+                       <td>{{coche.Modelo}}</td>
+                       <td>{{coche.Descripcion}}</td>
+                       <td>{{coche.Year|date:"dd/mm/yy"}}</td>
+                       <td>{{coche.Presio|currency}}</td>
+                       <td>{{coche.Marca}}</td>
+                       <td>{{coche.Color}}</td>
+                       
+                   </tr>
+               </tbody>
+           </table>
+       </div>
+    </div>
+   </div>

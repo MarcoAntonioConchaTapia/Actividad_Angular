@@ -1,0 +1,76 @@
+<div class="bg-primary p-3">
+    <h1 class="p-2">Cine Mexicano</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <form>
+                    <div class="border p-3">
+                        <div class="mb-3">
+                            <h3>Entradas</h3>
+                            <label class="form-label">Nombre</label>
+                            <input type="name" class="form-control" [(ngModel)]="nombre" id="floatingInput">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Cantidad de compradores</label>
+                            <input  class="form-control" [(ngModel)]="numeroC">
+                        </div>
+
+                        <div class="mb-3 form-check">
+                            <label class="form-label">Número de tarjeta</label>
+                            <div>
+                                <input class="form-check-input" type="radio" name="si" [(ngModel)]="tarjeta"
+                                    [value]="true">
+                                <label class="form.check-label">
+                                    Si
+                                </label>
+                            </div>
+                            <div>
+                                <input class="form-check-input" type="radio" name="no" [(ngModel)]="tarjeta"
+                                    [value]="false">
+                                <label class="form.check-label">
+                                    No
+                                </label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Cantidad de boletos</label>
+                            <input class="form-control" [(ngModel)]="numeroB">
+                            <br>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-6 border p-3">
+
+
+
+
+
+
+            </div>
+            <h3>Check Out</h3>
+            <label class="form-label"> Valor a pagar</label>
+            <input class="form-control" disabled="true" [(ngModel)]="pagar">
+            <div *ngIf="aviso2E">
+                <h1>No se puede comprar</h1>
+            </div>
+            <div *ngIf="aviso1">
+                <h1>Comprado</h1>
+            </div>
+
+
+            <div class="border p-3">
+                <h3>Proceso</h3>
+                <div>
+                    <button class="btn btn-secondary" (click)=" procesoCine()">Procesar</button>
+                </div>
+                <br>
+                <div>
+                    <button type="submit" class="btn btn-secondary">Salir</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
